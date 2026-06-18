@@ -42,4 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function organizationUsers()
+    {
+        return $this->hasMany(OrganizationUser::class);
+    }
 }
